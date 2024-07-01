@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Form</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+          background-image:url('https://images.squarespace-cdn.com/content/v1/54e6ffe7e4b0663b4a777e12/a46a4f3f-5080-40f4-addf-a91f7950bb45/WEB+Milky+Way+rising+over+Kynance+Cove%2C+beautiful+night+under+stars+-+Kat+Lawman.jpg?format=1000w'); 
+          background-repeat:no-repeat;
+          background-attachment:fixed;
+          background-size:cover;
+      }
+
+      .ka{
+          padding:200px;
+          filter:blur(10px);
+              }
+      form {
+          max-width: 400px;
+          margin: 200px auto;
+          background-top-color: transparent;
+          border:2px solid white;
+          padding: 40px;
+          border-radius: 8px;
+          box-shadow: 6px 6px 10px rgba(19, 19, 19, 0.1);
+
+      }
+
+      label {
+          display: block;
+          margin-bottom: 8px;
+          color:grey;
+      }
+
+      input {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 12px;
+      }
+
+      button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      button:hover {
+          background-color: #45a049;
+      }
+    </style>
+</head>
+
+<body>
+<form  method="GET" action="/sss">
+    <label for="program_id" >SELECT AN OPTION:</label>
+<select id="program_id" name="program_id" >
+    <option value="111">111:Startup incubator Program</option>
+    <option value="112">112:Enterpreneurship Training Bootcamp</option>
+    <option value="113">113:Business Plan Competition</option>
+    <option value="114">114:Mentorship Program</option>
+    <option value="115">115:Social Entrepreneurship</option>
+    <option value="116">116:Digital Marketing Masterclass</option>
+  </select>
+  <br><br>
+  <button type="submit" value="Submit">Filter</button>
+</form>
+</body>
+</html>

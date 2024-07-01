@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Details</title>
+</head>
+<body>
+    <h1>Program Details</h1>
+
+    <h2>Programs in Descending Order of Participants</h2>
+    <ul>
+        {% for program_id, participant_count in programs %}
+            <li>Program ID: {{ program_id }} | Participants: {{ participant_count }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Participants in Program {{ opn }}</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Participant ID</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Program ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for participant in participant %}
+                <tr>
+                    <td>{{ participant[0] }}</td>
+                    <td>{{ participant[1] }}</td>
+                    <td>{{ participant[2] }}</td>
+                    <td>{{ participant[3] }}</td>
+                    <td>{{ participant[4] }}</td>
+                    <td>{{ participant[5] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

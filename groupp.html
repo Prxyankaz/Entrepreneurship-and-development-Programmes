@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Table Web Page</title>
+</head>
+<style>
+    .btn {
+            width: 200px;
+            height: 45px;
+            background: grey;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+          }
+  .b3{
+            padding-bottom:20px;
+            display:flex;
+            margin:20px;
+            float:left;
+            padding-left:610px;
+          }
+    body{
+     background-image: url('https://wallpapers.com/images/high/abstract-gaming-ech1dteoqqqeczcq.webp');
+     background-attachment:fixed;
+     background-size: cover;
+     background-repeat: no-repeat;
+     color:white;
+     
+    }
+    table {
+       border-collapse: collapse;
+       width: 70%;
+       margin: 0 auto;
+     }
+     table{
+         border: 1px solid ;
+         border-radius: 2px;
+         box-shadow:0 0 .2rem #fff,
+     0 0 .2rem white,
+    
+     0 0 0.2rem white,
+     
+     inset 0 0 1.1rem white ;
+   }
+   .section-title{
+     position: relative;
+     width: 100%;
+     text-align: center;
+     padding: 45px 0 30px 0;
+ }
+ .section-title::after{
+     position: absolute;
+     content: "";
+     width: 100%;
+     height: 1px;
+     left: 0;
+     background: #eeeeee;
+ }
+     
+     thead,th{
+         
+         border-bottom:1px solid white ;
+         
+     }
+     th, td {
+       border: 1px solid none;
+       padding: 8px;
+       text-align: center;
+     }
+     .title{
+       
+     
+        padding-left: 400px;
+        padding-top: 50px;
+     }
+   
+   </style>
+<body>
+
+    <div class='title'>
+        <svg width="444" height="30" viewBox="0 0 444 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_b_1_2)">
+            <path d="M0.126563 29V0.999998H14.8866L19.5266 3.68V16.16L14.8866 18.84H5.72656V29H0.126563ZM5.72656 5.8V14.04H13.9266V5.8H5.72656ZM38.0866 0.999998L48.0866 29H42.5666L40.4466 22.96H29.9666L27.8466 29H22.3266L32.3266 0.999998H38.0866ZM35.1666 8.04L31.6466 18.16H38.7266L35.2466 8.04H35.1666ZM73.3197 29H67.1597L61.1597 18.44H57.6797V29H52.0797V0.999998H67.2397L71.8797 3.68V15.76L67.2397 18.44L73.3197 29ZM57.6797 5.8V13.64H66.2797V5.8H57.6797ZM89.4413 5.8V29H83.8413V5.8H76.2813V0.999998H97.0013V5.8H89.4413ZM101.416 29V0.999998H107.016V29H101.416ZM128.798 20.8H134.398V26.52L129.758 29.2H118.438L113.798 26.52V3.48L118.438 0.799998H129.758L134.398 3.48V9.2H128.798V5.6H119.398V24.4H128.798V20.8ZM140.791 29V0.999998H146.391V29H140.791ZM153.173 29V0.999998H167.933L172.573 3.68V16.16L167.933 18.84H158.773V29H153.173ZM158.773 5.8V14.04H166.973V5.8H158.773ZM191.133 0.999998L201.133 29H195.613L193.493 22.96H183.013L180.893 29H175.373L185.373 0.999998H191.133ZM188.213 8.04L184.693 18.16H191.773L188.293 8.04H188.213ZM210.727 10.88V29H205.127V0.999998H210.367L222.447 19.12H222.527V0.999998H228.127V29H222.887L210.807 10.88H210.727ZM245.691 5.8V29H240.091V5.8H232.531V0.999998H253.251V5.8H245.691ZM257.666 14.8V3.48L262.306 0.799998H272.426L277.066 3.48V8.8H271.466V5.6H263.266V12.28H272.426L277.066 14.96V26.52L272.426 29.2H261.906L257.266 26.52V21.2H262.866V24.4H271.466V17.48H262.306L257.666 14.8ZM316.067 26.32L311.427 29H294.267V0.999998H311.427L316.067 3.68V26.32ZM299.867 5.8V24.2H310.467V5.8H299.867ZM328.461 17V24.2H339.621V29H322.861V0.999998H339.621V5.8H328.461V12.2H337.221V17H328.461ZM355.574 5.8V29H349.974V5.8H342.414V0.999998H363.134V5.8H355.574ZM378.516 0.999998L388.516 29H382.996L380.876 22.96H370.396L368.276 29H362.756L372.756 0.999998H378.516ZM375.596 8.04L372.076 18.16H379.156L375.676 8.04H375.596ZM392.509 29V0.999998H398.109V29H392.509ZM404.892 29V0.999998H410.492V24.2H420.052V29H404.892ZM424.463 14.8V3.48L429.103 0.799998H439.223L443.863 3.48V8.8H438.263V5.6H430.063V12.28H439.223L443.863 14.96V26.52L439.223 29.2H428.703L424.063 26.52V21.2H429.663V24.4H438.263V17.48H429.103L424.463 14.8Z" fill="#FFFDFD"/>
+            </g>
+            <defs>
+            <filter id="filter0_b_1_2" x="-3.87341" y="-3.20001" width="451.736" height="36.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_2"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_2" result="shape"/>
+            </filter>
+            </defs>
+            </svg>
+            
+    </div>
+    <br>
+    
+    <hr>
+    <br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+                <th>Header 4</th>
+                <th>Header 5</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for row in data %}
+            <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class='b3'>
+        <form action="/home">
+          <button class="btn Register-button" type="submit" value="home">BACK TO HOME</button>
+      </form>
+      </div>
+
+</body>
+</html>

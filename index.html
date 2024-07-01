@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Website</title>
+    <style>
+       
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 30px 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        body {
+            color:black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00011b;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url("https://wallpapercave.com/wp/wp6899583.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+    
+          .navbar .left {
+            flex: 1;
+          }
+          .navbar .right .links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px; /* Increased font size */
+          }
+          .brand {
+            font-weight: normal;
+            color: grey;
+            font-size: 16px; /* Increased font size */
+            white-space: nowrap; /* Prevents the heading from breaking into multiple lines */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left: 20px; /* Adds ellipsis (...) for overflowed text */
+          }
+    
+          .navbar .right {
+            flex: 3;
+            text-align: right;
+          }
+    
+          main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+    
+          footer {
+            background-color: #00081e;
+            background: transparent;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+            width: 100%;
+          }
+          .navbar {
+            background-color: #00081e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0px;
+            width: 100%;
+            height: 50px;
+          }
+    
+          .content {
+            color: aliceblue;
+            max-width: 800px;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0 10px 10px rgba(67, 134, 168, 0.1);
+            margin-top: 20px;
+            margin-bottom: 50px;
+            border: 5px solid black;
+            font-size: 22px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+          }
+          .content-text {
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+          }
+    
+          .content-text h2 {
+            color: aliceblue;
+            margin-top: 0;
+            font-size: 32px; /* Increased font size */
+          }
+          .login-button {
+            position: absolute;
+            bottom: 20px; /* Adjust the distance from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+          }
+    
+          .btn {
+            width: 200px;
+            height: 45px;
+            background: grey;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+          }
+          .b1{
+            padding-bottom:30px;
+            display:flex;
+            float:right;
+            margin:20px;
+          }
+          .b2{
+            padding-bottom:20px;
+            display:flex;
+            margin:20px;
+            float:left;
+          }
+          .b3{
+            padding-bottom:20px;
+            display:flex;
+            margin:20px;
+            float:left;
+            padding-left:260px;
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <svg width="786" height="39" viewBox="0 0 786 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_b_1_2)">
+            <path d="M6.55078 18V25.2H17.7108V30H0.950781V2H17.7108V6.8H6.55078V13.2H15.3108V18H6.55078ZM40.3039 12.48V30H34.8239V14.48H27.9839V30H22.5039V9.8H27.0239L27.9839 11.44L30.8239 9.8H35.6639L40.3039 12.48ZM44.693 14.68V10H48.373V6.64L53.853 3.48V10H58.253V14.68H53.853V25.32H58.253V30H53.013L48.373 27.32V14.68H44.693ZM75.8014 14.68H68.9214V30H63.4414V10H67.9614L68.9214 11.64L71.7614 10H75.8014V14.68ZM96.4086 25.32V30H84.4486L79.8086 27.32V12.48L84.4486 9.8H91.7686L96.4086 12.48V22.04H85.2886V25.32H96.4086ZM85.2886 14.48V17.92H90.9286V14.48H85.2886ZM115.986 30.2H110.746L107.906 28.56V38H102.426V9.8H106.946L107.906 11.44L110.746 9.8H115.986L120.626 12.48V27.52L115.986 30.2ZM107.906 14.48V25.52H115.146V14.48H107.906ZM139.005 14.68H132.125V30H126.645V10H131.165L132.125 11.64L134.965 10H139.005V14.68ZM159.612 25.32V30H147.652L143.012 27.32V12.48L147.652 9.8H154.972L159.612 12.48V22.04H148.492V25.32H159.612ZM148.492 14.48V17.92H154.132V14.48H148.492ZM183.429 12.48V30H177.949V14.48H171.109V30H165.629V9.8H170.149L171.109 11.44L173.949 9.8H178.789L183.429 12.48ZM206.018 25.32V30H194.058L189.418 27.32V12.48L194.058 9.8H201.378L206.018 12.48V22.04H194.898V25.32H206.018ZM194.898 14.48V17.92H200.538V14.48H194.898ZM212.035 27.52V10H217.515V25.52H224.355V10H229.835V30.2H225.315L224.355 28.56L221.515 30.2H216.675L212.035 27.52ZM248.184 14.68H241.304V30H235.824V10H240.344L241.304 11.64L244.144 10H248.184V14.68ZM268.031 20.16V27.32L263.391 30H252.191V25.32H262.551V22.24H256.831L252.191 19.56V12.68L256.831 10H267.631V14.68H257.671V17.48H263.391L268.031 20.16ZM279.507 30H274.027V0.799999H279.507V11.44L282.347 9.8H287.587L292.227 12.48V30H286.747V14.48H279.507V30ZM303.726 10V30H298.246V10H303.726ZM298.046 6.28V0.799999H303.926V6.28H298.046ZM323.29 30.2H318.05L315.21 28.56V38H309.73V9.8H314.25L315.21 11.44L318.05 9.8H323.29L327.93 12.48V27.52L323.29 30.2ZM315.21 14.48V25.52H322.45V14.48H315.21ZM366.54 27.32L361.9 30H344.74V2H361.9L366.54 4.68V27.32ZM350.34 6.8V25.2H360.94V6.8H350.34ZM389.534 25.32V30H377.574L372.934 27.32V12.48L377.574 9.8H384.894L389.534 12.48V22.04H378.414V25.32H389.534ZM378.414 14.48V17.92H384.054V14.48H378.414ZM398.631 10L403.231 23.12H403.311L407.951 10H413.431L406.031 30H400.551L393.151 10H398.631ZM433.635 25.32V30H421.675L417.035 27.32V12.48L421.675 9.8H428.995L433.635 12.48V22.04H422.515V25.32H433.635ZM422.515 14.48V17.92H428.155V14.48H422.515ZM444.292 30L439.652 27.32V0.799999H445.132V25.32H449.132V30H444.292ZM470.538 27.52L465.898 30.2H457.378L452.738 27.52V12.48L457.378 9.8H465.898L470.538 12.48V27.52ZM458.218 14.48V25.52H465.058V14.48H458.218ZM490.087 30.2H484.847L482.007 28.56V38H476.527V9.8H481.047L482.007 11.44L484.847 9.8H490.087L494.727 12.48V27.52L490.087 30.2ZM482.007 14.48V25.52H489.247V14.48H482.007ZM528.866 12.48V30H523.386V14.48H517.546V30H512.066V14.48H506.226V30H500.746V9.8H505.266L506.226 11.44L509.066 9.8H512.906L516.626 11.96L520.386 9.8H524.226L528.866 12.48ZM551.448 25.32V30H539.488L534.848 27.32V12.48L539.488 9.8H546.808L551.448 12.48V22.04H540.328V25.32H551.448ZM540.328 14.48V17.92H545.968V14.48H540.328ZM575.265 12.48V30H569.785V14.48H562.945V30H557.465V9.8H561.985L562.945 11.44L565.785 9.8H570.625L575.265 12.48ZM579.654 14.68V10H583.334V6.64L588.814 3.48V10H593.214V14.68H588.814V25.32H593.214V30H587.974L583.334 27.32V14.68H579.654ZM609.193 30V2H623.953L628.593 4.68V17.16L623.953 19.84H614.793V30H609.193ZM614.793 6.8V15.04H622.993V6.8H614.793ZM646.153 14.68H639.273V30H633.793V10H638.313L639.273 11.64L642.113 10H646.153V14.68ZM667.96 27.52L663.32 30.2H654.8L650.16 27.52V12.48L654.8 9.8H663.32L667.96 12.48V27.52ZM655.64 14.48V25.52H662.48V14.48H655.64ZM673.149 35.52V32.72L677.789 30L673.949 27.76V24.16L676.789 22.52L673.949 20.88V12.68L678.589 10H692.149V12.56L688.509 14.68L690.949 16.12V20.44L686.309 23.12H679.429V25.72H687.509L692.149 28.4V35.52L687.509 38.2H677.789L673.149 35.52ZM686.669 30H678.629V33.6H686.669V30ZM679.429 14.48V18.64H685.469V14.48H679.429ZM709.708 14.68H702.828V30H697.348V10H701.868L702.828 11.64L705.668 10H709.708V14.68ZM718.395 22.12V25.6H724.035V22.12H718.395ZM717.555 30.2L712.915 27.52V20.6L717.555 17.92H724.035V14.68H714.915V10H724.875L729.515 12.68V30.2H726.875L724.035 28.56L721.195 30.2H717.555ZM763.632 12.48V30H758.152V14.48H752.312V30H746.832V14.48H740.992V30H735.512V9.8H740.032L740.992 11.44L743.832 9.8H747.672L751.392 11.96L755.152 9.8H758.992L763.632 12.48ZM785.453 20.16V27.32L780.813 30H769.613V25.32H779.973V22.24H774.253L769.613 19.56V12.68L774.253 10H785.053V14.68H775.093V17.48H780.813L785.453 20.16Z" fill="#969696"/>
+            </g>
+            <defs>
+            <filter id="filter0_b_1_2" x="-3.04919" y="-3.2" width="792.502" height="45.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_2"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_2" result="shape"/>
+            </filter>
+            </defs>
+            </svg>
+            
+       
+    </header>
+
+    <nav>
+        <a href="">HOME</a>
+        <a href="/dbm">PROGRAMS</a>
+        <a href="/reg">REGISTRATION</a>
+        <a href="/update">UPDATEPROFILE</a>
+    </nav>
+
+    <main>
+        <div class="content">
+            <svg width="199" height="44" viewBox="0 0 199 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_b_1_2)">
+                <path d="M24.4326 0.999997L39.4326 43H31.1526L27.9726 33.94H12.2526L9.07258 43H0.792578L15.7926 0.999997H24.4326ZM20.0526 11.56L14.7726 26.74H25.3926L20.1726 11.56H20.0526ZM75.1223 18.22L69.9023 21.22V21.34L75.1223 24.34V38.98L68.1623 43H45.4223V0.999997H68.1623L75.1223 5.02V18.22ZM53.8223 24.88V35.8H66.7223V24.88H53.8223ZM53.8223 8.2V17.68H66.7223V8.2H53.8223ZM118.025 39.28L111.065 43.3H92.2846L85.3246 39.28V4.72L92.2846 0.699997H111.065L118.025 4.72V39.28ZM93.7246 7.9V36.1H109.625V7.9H93.7246ZM152.515 0.999997H160.915V39.28L153.955 43.3H135.175L128.215 39.28V0.999997H136.615V35.5H152.515V0.999997ZM187.246 8.2V43H178.846V8.2H167.506V0.999997H198.586V8.2H187.246Z" fill="#969696"/>
+                </g>
+                <defs>
+                <filter id="filter0_b_1_2" x="-3.2074" y="-3.3" width="205.793" height="50.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_2"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_2" result="shape"/>
+                </filter>
+                </defs>
+                </svg>
+                
+            <div class="content-text">
+                <p>
+                  Entrepreneurship promotion and development Programmes are being
+                  organized regularly to nurture the talent of youth by enlightening
+                  them on various aspects of industrial/business activity required for
+                  setting up MSEs. These Programmes are conducted for youth and other
+                  people interested to set up their own industrial/self-employment
+                  venture. Such activities are also organized in ITIs, Polytechnics
+                  and other technical institutions/business schools, where
+                  skill/talent is available to motivate them towards self-employment.
+                </p>
+                
+              </div>      
+            </div>
+        </main>
+        <nav>
+        <div class='b1'>
+        <form method="GET" action="/del_v">
+            <button class="btn Register-button" type="submit" value="Delete_profile">DELETE</button>
+        </form>
+    </div>
+    <div class='b2'>
+        <form method="GET" action="/group_program">
+          <button class="btn Register-button" type="submit" value="program_group">DISPLAY</button>
+      </form>
+    </div>
+    <div class='b3'>
+      <form method="GET" action="/selpid">
+        <button class="btn Register-button" type="submit" value="program_group">FILTER</button>
+    </form>
+  </div>
+</nav>
+      
+    
+
+    <footer>
+        <p>&copy; 2023 Our Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

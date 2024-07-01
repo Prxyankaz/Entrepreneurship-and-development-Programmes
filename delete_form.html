@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image:url('https://images.unsplash.com/photo-1515355252367-42ae86cb92f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+        }
+
+        .ka{
+            padding:200px:
+            filter:blur(10px);
+                }
+        form {
+            max-width: 400px;
+            margin: 200px auto;
+            background-top-color: transparent;
+            border:2px solid white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 6px 6px 10px rgba(19, 19, 19, 0.1);
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color:grey;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="ka">
+    <form action="{{ url_for('delete') }}" method="post">
+        <svg width="157" height="16" viewBox="0 0 157 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_b_1_2)">
+<path d="M3.24414 9V12.6H8.82414V15H0.444141V0.999999H8.82414V3.4H3.24414V6.6H7.62414V9H3.24414ZM14.2207 5.94V15H11.4207V0.999999H14.0407L20.0807 10.06H20.1207V0.999999H22.9207V15H20.3007L14.2607 5.94H14.2207ZM31.703 3.4V15H28.903V3.4H25.123V0.999999H35.483V3.4H31.703ZM40.4902 9V12.6H46.0702V15H37.6902V0.999999H46.0702V3.4H40.4902V6.6H44.8702V9H40.4902ZM59.2868 15H56.2068L53.2068 9.72H51.4668V15H48.6668V0.999999H56.2468L58.5668 2.34V8.38L56.2468 9.72L59.2868 15ZM51.4668 3.4V7.32H55.7668V3.4H51.4668ZM70.2629 15V9.02L65.7629 0.999999H68.8029L71.6429 6.24H71.6829L74.5429 0.999999H77.5829L73.0629 9.04V15H70.2629ZM90.4848 13.76L88.1648 15.1H81.9048L79.5848 13.76V2.24L81.9048 0.899999H88.1648L90.4848 2.24V13.76ZM82.3848 3.3V12.7H87.6848V3.3H82.3848ZM101.982 0.999999H104.782V13.76L102.462 15.1H96.2016L93.8816 13.76V0.999999H96.6816V12.5H101.982V0.999999ZM118.799 15H115.719L112.719 9.72H110.979V15H108.179V0.999999H115.759L118.079 2.34V8.38L115.759 9.72L118.799 15ZM110.979 3.4V7.32H115.279V3.4H110.979ZM126.675 15V0.999999H129.475V15H126.675ZM143.766 13.66L141.446 15H132.866V0.999999H141.446L143.766 2.34V13.66ZM135.666 3.4V12.6H140.966V3.4H135.666ZM152.558 15V11.2H156.358V15H152.558ZM152.558 8.4V4.6H156.358V8.4H152.558Z" fill="#FFFDFD"/>
+</g>
+<defs>
+<filter id="filter0_b_1_2" x="-3.55585" y="-3.10001" width="163.914" height="22.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_2"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_2" result="shape"/>
+</filter>
+</defs>
+</svg>
+
+        <label for="p_id"></label>
+        <input type="text" id="p_id" name="p_id" required>
+        <button type="submit">Delete</button>
+    </div>
+    </form>
+</body>
+</html>
