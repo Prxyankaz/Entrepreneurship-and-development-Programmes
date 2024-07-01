@@ -1,5 +1,4 @@
-Entrepreneurship Development Program Website
-Introduction
+
 Welcome to the Entrepreneurship Development Program (EDP) website. This platform is designed to support aspiring entrepreneurs by offering various programs, resources, and tools to help them succeed in their ventures.
 
 Features
