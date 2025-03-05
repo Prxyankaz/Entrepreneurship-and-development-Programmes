@@ -1,22 +1,56 @@
+# Entrepreneurship and Development Programmes (EDP)
 
-Welcome to the Entrepreneurship Development Program (EDP) website. This platform is designed to support aspiring entrepreneurs by offering various programs, resources, and tools to help them succeed in their ventures.
+## Overview
+This project is a web-based platform designed to facilitate Entrepreneurship Development Programs (EDP). The system allows users to register, log in, and enroll in various programs. It also provides CRUD operations and statistical insights into the most popular programs.
 
-Features
-The website includes the following features:
+## Features
+- **User Authentication:** Secure login and registration system
+- **Program Management:** Add, update, delete, and view programs
+- **User Enrollment:** Users can register for specific programs
+- **Statistics Dashboard:** View insights on program popularity
 
-Programs Offered: Information on available programs.
-Registration: Enroll in programs.
-Update Profile: Edit personal information.
-Remove Participant: Delete participant records.
-Display Participants: View list of participants.
-Filter Participants: Sort participants based on the program they are registered in and view statistics.
+## Tech Stack
+- **Backend:** Python, Flask
+- **Frontend:** HTML, CSS
+- **Database:** MySQL
 
+## Installation & Setup
+### Prerequisites
+Ensure you have the following installed:
+- Python (3.x)
+- MySQL
+- Flask
 
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Prxyankaz/Entrepreneurship-and-development-Programmes.git
+   cd Entrepreneurship-and-development-Programmes
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Configure the database:
+   - Create a MySQL database
+   - Update database credentials in the configuration file
+4. Run the application:
+   ```bash
+   python app.py
+   ```
+5. Access the platform at `http://localhost:5000`
 
-How to Get Started
-Explore Programs: Visit the Programs Offered section to learn about the various programs available.
-Register: Go to the Registration page to sign up for a program.
-Update Profile: If you need to change your personal information, use the Update Profile feature.
-Manage Participants: Admins can remove participants via the Remove Participant section.
-View Participants: Check out the Display Participants section to see who is enrolled.
-Filter and Stats: Use the Filter Participants feature to sort participants and view statistics.
+## Usage
+- **Sign Up/Login** to access the platform
+- **Enroll in Programs** from the available list
+- **View Insights** on the dashboard
+
+## Contributing
+Feel free to submit issues or pull requests to enhance the project!
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For queries, contact [Your Email/LinkedIn].
+
