@@ -45,12 +45,9 @@ Ensure you have the following installed:
 - **Enroll in Programs** from the available list
 - **View Insights** on the dashboard
 
-## Contributing
-Feel free to submit issues or pull requests to enhance the project!
+
 
 ## License
 This project is licensed under the MIT License.
 
-## Contact
-For queries, contact [Your Email/LinkedIn].
 
