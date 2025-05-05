@@ -29,7 +29,8 @@ Ensure you have the following installed:
    ```
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install flask mysql-connector-python
+
    ```
 3. Configure the database:
    - Create a MySQL database
