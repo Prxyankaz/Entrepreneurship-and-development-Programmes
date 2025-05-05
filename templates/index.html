@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Development Initiative</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #00011b;
+            display: flex;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background: rgba(0, 8, 30, 0.9);
+            backdrop-filter: blur(10px);
+            height: 100vh;
+            position: fixed;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            /* Hide sidebar by default */
+            transform: translateX(-250px);
+        }
+
+        .sidebar-logo {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-logo svg {
+            max-width: 180px;
+            height: auto;
+            fill: #969696;
+        }
+
+        .sidebar-menu {
+            margin-top: 30px;
+            flex-grow: 1;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            color: #969696;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 16px;
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar-menu a i {
+            margin-right: 15px;
+            font-size: 18px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .sidebar-menu a:hover, .sidebar-menu a.active {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+            border-left-color: #49C628;
+        }
+
+        .sidebar-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: rgba(0, 8, 30, 0.8);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            z-index: 1001;
+            font-size: 20px;
+            display: block;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            margin-left: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url("https://wallpapercave.com/wp/wp6899583.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav.top-nav {
+            background-color: rgba(68, 68, 68, 0.7);
+            backdrop-filter: blur(5px);
+            padding: 15px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav.top-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 5px 15px;
+            font-size: 16px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        nav.top-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content {
+            color: #fff;
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+        }
+
+        .content svg {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .content-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .content-text p {
+            margin-bottom: 15px;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .btn {
+            min-width: 150px;
+            height: 45px;
+            background: linear-gradient(135deg, #70F570 10%, #49C628 100%);
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 5px 15px rgba(73, 198, 40, 0.3);
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(73, 198, 40, 0.5);
+        }
+
+        .btn.delete-btn {
+            background: linear-gradient(135deg, #ff6b6b 10%, #ee5253 100%);
+            color: white;
+        }
+
+        footer {
+            background-color: rgba(104, 104, 104, 0.7);
+            backdrop-filter: blur(5px);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 2002px) {
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            body.sidebar-open .main-content {
+                transform: translateX(250px);
+                opacity: 0.7;
+                pointer-events: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            .content-text {
+                font-size: 16px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            header svg {
+                width: 280px;
+            }
+            
+            .content svg {
+                width: 120px;
+            }
+            
+            nav.top-nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+            
+            .sidebar-toggle {
+                top: 10px;
+                left: 10px;
+                padding: 6px 10px;
+            }
+        }
+
+        /* Mobile overlay for clicking outside sidebar to close */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }
+
+        body.sidebar-open .overlay {
+            display: block;
+        }
+        header h1 {
+          color:rgb(100, 100, 100);
+      }
+    </style>
+</head>
+<body>
+  <script>
+    document.getElementById('sidebar-toggle').addEventListener('click', function() {
+        document.getElementById('sidebar').classList.toggle('active');
+        document.body.classList.toggle('sidebar-open');
+    });
+
+    document.getElementById('overlay').addEventListener('click', function() {
+        document.getElementById('sidebar').classList.remove('active');
+        document.body.classList.remove('sidebar-open');
+    });
+</script>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <svg width="180" height="30" viewBox="0 0 786 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.55078 18V25.2H17.7108V30H0.950781V2H17.7108V6.8H6.55078V13.2H15.3108V18H6.55078ZM40.3039 12.48V30H34.8239V14.48H27.9839V30H22.5039V9.8H27.0239L27.9839 11.44L30.8239 9.8H35.6639L40.3039 12.48ZM44.693 14.68V10H48.373V6.64L53.853 3.48V10H58.253V14.68H53.853V25.32H58.253V30H53.013L48.373 27.32V14.68H44.693ZM75.8014 14.68H68.9214V30H63.4414V10H67.9614L68.9214 11.64L71.7614 10H75.8014V14.68ZM96.4086 25.32V30H84.4486L79.8086 27.32V12.48L84.4486 9.8H91.7686L96.4086 12.48V22.04H85.2886V25.32H96.4086ZM85.2886 14.48V17.92H90.9286V14.48H85.2886ZM115.986 30.2H110.746L107.906 28.56V38H102.426V9.8H106.946L107.906 11.44L110.746 9.8H115.986L120.626 12.48V27.52L115.986 30.2ZM107.906 14.48V25.52H115.146V14.48H107.906Z" fill="#969696"/>
+                <path d="M139.005 14.68H132.125V30H126.645V10H131.165L132.125 11.64L134.965 10H139.005V14.68ZM159.612 25.32V30H147.652L143.012 27.32V12.48L147.652 9.8H154.972L159.612 12.48V22.04H148.492V25.32H159.612ZM148.492 14.48V17.92H154.132V14.48H148.492Z" fill="#969696"/>
+                <path d="M183.429 12.48V30H177.949V14.48H171.109V30H165.629V9.8H170.149L171.109 11.44L173.949 9.8H178.789L183.429 12.48ZM206.018 25.32V30H194.058L189.418 27.32V12.48L194.058 9.8H201.378L206.018 12.48V22.04H194.898V25.32H206.018ZM194.898 14.48V17.92H200.538V14.48H194.898Z" fill="#969696"/>
+            </svg>
+        </div>
+        <div class="sidebar-menu">
+            <a href="" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="/dbm"><i class="fas fa-list-alt"></i> Programs</a>
+            <a href="/reg"><i class="fas fa-user-plus"></i> Registration</a>
+            <a href="/update"><i class="fas fa-user-edit"></i> Update Profile</a>
+            <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="#"><i class="fas fa-phone"></i> Contact</a>
+            <a href="#"><i class="fas fa-question-circle"></i> FAQs</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <h1>ENTREPRENEURSHIP DEVELOPMENT PROGRAMS</h1>
+        </header>
+
+        <nav class="top-nav">
+            <a href="">HOME</a>
+            <a href="/dbm">PROGRAMS</a>
+            <a href="/reg">REGISTRATION</a>
+            <a href="/update">UPDATE PROFILE</a>
+        </nav>
+
+        <main>
+            <div class="content">
+                <svg width="180" height="44" viewBox="0 0 199 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.4326 0.999997L39.4326 43H31.1526L27.9726 33.94H12.2526L9.07258 43H0.792578L15.7926 0.999997H24.4326ZM20.0526 11.56L14.7726 26.74H25.3926L20.1726 11.56H20.0526ZM75.1223 18.22L69.9023 21.22V21.34L75.1223 24.34V38.98L68.1623 43H45.4223V0.999997H68.1623L75.1223 5.02V18.22ZM53.8223 24.88V35.8H66.7223V24.88H53.8223ZM53.8223 8.2V17.68H66.7223V8.2H53.8223ZM118.025 39.28L111.065 43.3H92.2846L85.3246 39.28V4.72L92.2846 0.699997H111.065L118.025 4.72V39.28ZM93.7246 7.9V36.1H109.625V7.9H93.7246ZM152.515 0.999997H160.915V39.28L153.955 43.3H135.175L128.215 39.28V0.999997H136.615V35.5H152.515V0.999997ZM187.246 8.2V43H178.846V8.2H167.506V0.999997H198.586V8.2H187.246Z" fill="#969696"/>
+                </svg>
+                
+                <div class="content-text">
+                    <p>
+                        Entrepreneurship promotion and development programmes are designed to nurture the talent of youth by enlightening them on various aspects of industrial/business activity required for setting up MSEs.
+                    </p>
+                    <p>
+                        These programmes are conducted for youth and other people interested in establishing their own industrial/self-employment venture. Such activities are also organized in ITIs, Polytechnics, and other technical institutions/business schools, where skill/talent is available to motivate them towards self-employment.
+                    </p>
+                    <p>
+                        Our goal is to help you transform your innovative ideas into successful businesses through structured training, mentorship, and resources.
+                    </p>
+                </div>
+                
+                <div class="action-buttons">
+                    <form method="GET" action="/group_program">
+                        <button class="btn" type="submit">
+                            <i class="fas fa-list-ul"></i>&nbsp; DISPLAY
+                        </button>
+                    </form>
+                    
+                    <form method="GET" action="/selpid">
+                        <button class="btn" type="submit">
+                            <i class="fas fa-filter"></i>&nbsp; FILTER
+                        </button>
+                    </form>
+                    
+                    <form method="GET" action="/del_v">
+                        <button class="btn delete-btn" type="submit">
+                            <i class="fas fa-trash-alt"></i>&nbsp; DELETE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Business Development Initiative. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for sidebar toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const overlay = document.getElementById('overlay');
+            const body = document.body;
+            
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+                body.classList.toggle('sidebar-open');
+            });
+            
+            overlay.addEventListener('click', function() {
+                sidebar.classList.remove('active');
+                body.classList.remove('sidebar-open');
+            });
+            
+            // Close sidebar on window resize if screen becomes larger
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 992) {
+                    sidebar.classList.remove('active');
+                    body.classList.remove('sidebar-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        nav.top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            }
+    .top-nav {
+                background-color: rgba(68, 68, 68, 0.7);
+                backdrop-filter: blur(5px);
+                padding: 15px 0;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+    
+            nav.top-nav a {
+                color: white;
+                text-decoration: none;
+                margin: 5px 15px;
+                font-size: 16px;
+                padding: 5px 10px;
+                border-radius: 5px;
+                transition: all 0.3s;
+            }
+    
+            nav.top-nav a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+    
+    
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://www.pixel4k.com/wp-content/uploads/2018/09/dubai-architecture-buildings-night-4k_1538066417.jpg.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            padding-top:100px;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0); /* Dark overlay for better contrast */
+        }
+        
+        h2 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 600;
+        }
+        
+        form {
+            position: relative;
+            max-width: 500px;
+            width: 100%;
+            background-color: rgba(180, 174, 174, 0.8); /* Semi-transparent form background */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+
+        }
+        
+        label {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: white;
+            display: block;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1em;
+            color: #333;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        input[type="submit"]:active {
+            background-color: #388e3c;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            form {
+                padding: 20px;
+                width: 80%;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            form {
+                padding: 15px;
+                width: 90%;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE UPDATION</title>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="/">HOME</a>
+        <a href="/dbm">PROGRAMS</a>
+        <a href="/reg">REGISTRATION</a>
+        <a href="/update">UPDATE PROFILE</a>
+    </nav>
+    <div class="overlay"></div>
+    
+    <form action="/update_profile" method="post">
+        <h2>Update Profile</h2>
+        
+        <label for="p_id">Participant ID:</label>
+        <input type="text" id="p_id" name="p_id" required><br>
+
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required><br>
+
+        <input type="submit" value="UPDATE">
+    </form>
+</body>
+</html>

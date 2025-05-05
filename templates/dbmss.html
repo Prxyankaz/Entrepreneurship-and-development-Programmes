@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneurship Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and Base Styles */
+        
+        nav.top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            }
+    .top-nav {
+                background-color: rgba(68, 68, 68, 0.7);
+                backdrop-filter: blur(5px);
+                padding: 15px 0;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+    
+            nav.top-nav a {
+                color: white;
+                text-decoration: none;
+                margin: 5px 15px;
+                font-size: 16px;
+                padding: 5px 10px;
+                border-radius: 5px;
+                transition: all 0.3s;
+            }
+    
+            nav.top-nav a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+    
+    
+    
+
+
+
+
+        *{
+            font-family: 'Poppins', sans-serif;
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+            outline: none; 
+            border: none;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            color: #fff;
+            background-color: #000;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        .hero-section {
+            min-height: 100vh;
+            padding: 120px 5% 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/898/130/528/helix-nebula-galaxy-eye-of-god-universe-wallpaper-preview.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-logo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 50px;
+        }
+
+        /* Programs Section */
+        .programs-section {
+            padding: 80px 10%;
+            background-image: url('https://rare-gallery.com/thumbs/374145-4k-wallpaper.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .programs-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .box {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            text-align: center;
+            padding: 40px 30px;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .box h2 {
+            color: #ff9500;
+            font-size: 2.5rem;
+            padding: 5px 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        .box h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: #ff9500;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .box h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            padding: 15px 0;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff9500, #ff5e62);
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 30px;
+            padding: 12px 30px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 149, 0, 0.3);
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 149, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            min-height: 100vh;
+            padding: 100px 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://wallpaperaccess.com/full/552514.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            text-align: center;
+        }
+
+        .contact-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+        }
+
+        .contact-logo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .box-container {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            .hero-section,
+            .programs-section,
+            .contact-section {
+                padding: 80px 5%;
+            }
+            .hero-logo, .contact-logo {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .box-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .box h2 {
+                font-size: 2.2rem;
+            }
+            .box h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            
+            nav.top-nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+            
+            .hero-section,
+            .programs-section,
+            .contact-section {
+                padding: 60px 4%;
+            }
+            .box-container {
+                grid-template-columns: 1fr;
+                max-width: 360px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-logo, .contact-logo {
+                max-width: 100%;
+            }
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            .box {
+                padding: 30px 20px;
+            }
+            .box h2 {
+                font-size: 2rem;
+            }
+            .btn {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="/">HOME</a>
+        <a href="/dbm">PROGRAMS</a>
+        <a href="/reg">REGISTRATION</a>
+        <a href="/update">UPDATE PROFILE</a>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content fade-in">
+            <svg class="hero-logo" width="626" height="231" viewBox="0 0 626 231" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_b_1_2)">
+                <path d="M9.49375 26.8V38.32H27.3498V46H0.53375V1.2H27.3498V8.88H9.49375V19.12H23.5098V26.8H9.49375ZM44.6188 17.008V46H35.6588V1.2H44.0428L63.3708 30.192H63.4988V1.2H72.4588V46H64.0748L44.7468 17.008H44.6188ZM100.562 8.88V46H91.6023V8.88H79.5063V1.2H112.658V8.88H100.562ZM153.705 46H143.849L134.249 29.104H128.681V46H119.721V1.2H143.977L151.401 5.488V24.816L143.977 29.104L153.705 46ZM128.681 8.88V21.424H142.441V8.88H128.681ZM171.244 26.8V38.32H189.1V46H162.284V1.2H189.1V8.88H171.244V19.12H185.26V26.8H171.244ZM197.409 46V1.2H221.025L228.449 5.488V25.456L221.025 29.744H206.369V46H197.409ZM206.369 8.88V22.064H219.489V8.88H206.369ZM271.393 46H261.537L251.937 29.104H246.369V46H237.409V1.2H261.665L269.089 5.488V24.816L261.665 29.104L271.393 46ZM246.369 8.88V21.424H260.129V8.88H246.369ZM288.931 26.8V38.32H306.787V46H279.971V1.2H306.787V8.88H288.931V19.12H302.947V26.8H288.931ZM324.056 17.008V46H315.096V1.2H323.48L342.808 30.192H342.936V1.2H351.896V46H343.512L324.184 17.008H324.056ZM371.744 26.8V38.32H389.6V46H362.784V1.2H389.6V8.88H371.744V19.12H385.76V26.8H371.744ZM423.829 1.2H432.789V42.032L425.365 46.32H405.333L397.909 42.032V1.2H406.869V38H423.829V1.2ZM477.643 46H467.787L458.187 29.104H452.619V46H443.659V1.2H467.915L475.339 5.488V24.816L467.915 29.104L477.643 46ZM452.619 8.88V21.424H466.379V8.88H452.619ZM486.221 23.28V5.168L493.645 0.879997H509.837L517.261 5.168V13.68H508.301V8.56H495.181V19.248H509.837L517.261 23.536V42.032L509.837 46.32H493.005L485.581 42.032V33.52H494.541V38.64H508.301V27.568H493.645L486.221 23.28ZM537.119 26.8V46H528.159V1.2H537.119V19.12H554.719V1.2H563.679V46H554.719V26.8H537.119ZM574.534 46V1.2H583.494V46H574.534ZM594.346 46V1.2H617.962L625.386 5.488V25.456L617.962 29.744H603.306V46H594.346ZM603.306 8.88V22.064H616.426V8.88H603.306ZM117.414 133.712L109.99 138H82.5338V93.2H109.99L117.414 97.488V133.712ZM91.4938 100.88V130.32H108.454V100.88H91.4938ZM137.244 118.8V130.32H155.1V138H128.284V93.2H155.1V100.88H137.244V111.12H151.26V118.8H137.244ZM200.785 93.2L184.785 138H174.929L158.929 93.2H168.017L179.857 127.056H179.985L191.697 93.2H200.785ZM216.119 118.8V130.32H233.975V138H207.159V93.2H233.975V100.88H216.119V111.12H230.135V118.8H216.119ZM242.284 138V93.2H251.244V130.32H266.54V138H242.284ZM308.476 134.032L301.052 138.32H281.02L273.596 134.032V97.168L281.02 92.88H301.052L308.476 97.168V134.032ZM282.556 100.56V130.64H299.516V100.56H282.556ZM319.346 138V93.2H342.962L350.386 97.488V117.456L342.962 121.744H328.306V138H319.346ZM328.306 100.88V114.064H341.426V100.88H328.306ZM397.042 138V108.432H396.914L386.802 138H378.29L368.114 108.048H367.986V138H359.346V93.2H371.25L382.514 126.16H382.642L393.842 93.2H405.682V138H397.042ZM425.494 118.8V130.32H443.35V138H416.534V93.2H443.35V100.88H425.494V111.12H439.51V118.8H425.494ZM460.619 109.008V138H451.659V93.2H460.043L479.371 122.192H479.499V93.2H488.459V138H480.075L460.747 109.008H460.619ZM516.562 100.88V138H507.602V100.88H495.506V93.2H528.658V100.88H516.562ZM160.565 230V185.2H184.181L191.605 189.488V209.456L184.181 213.744H169.525V230H160.565ZM169.525 192.88V206.064H182.645V192.88H169.525ZM234.549 230H224.693L215.093 213.104H209.525V230H200.565V185.2H224.821L232.245 189.488V208.816L224.821 213.104L234.549 230ZM209.525 192.88V205.424H223.285V192.88H209.525ZM278.008 226.032L270.583 230.32H250.552L243.128 226.032V189.168L250.552 184.88H270.583L278.008 189.168V226.032ZM252.088 192.56V222.64H269.048V192.56H252.088ZM304.878 214.32V206.64H321.198V226.032L313.774 230.32H295.662L288.238 226.032V189.168L295.662 184.88H313.774L321.198 189.168V198.32H312.238V192.56H297.198V222.64H312.238V214.32H304.878ZM365.424 230H355.568L345.968 213.104H340.4V230H331.44V185.2H355.696L363.12 189.488V208.816L355.696 213.104L365.424 230ZM340.4 192.88V205.424H354.16V192.88H340.4ZM394.739 185.2L410.739 230H401.907L398.515 220.336H381.747L378.355 230H369.523L385.523 185.2H394.739ZM390.067 196.464L384.435 212.656H395.763L390.195 196.464H390.067ZM454.824 230V200.432H454.696L444.583 230H436.072L425.896 200.048H425.768V230H417.128V185.2H429.032L440.296 218.16H440.424L451.624 185.2H463.464V230H454.824Z" fill="#FFFDFD"/>
+                </g>
+                <defs>
+                <filter id="filter0_b_1_2" x="-3.46625" y="-3.12" width="632.852" height="237.44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_2"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_2" result="shape"/>
+                </filter>
+                </defs>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section" id="programs">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Programs</h2>
+            
+            <div class="box-container fade-in">
+                <div class="box">
+                    <h2>111</h2>
+                    <h3>Startup Incubator Program</h3>
+                    <a href="https://www.hubspot.com/startups/resources/what-is-an-incubator" class="btn">Read More</a>
+                </div>
+
+                <div class="box">
+                    <h2>112</h2>
+                    <h3>Entrepreneurship Training Bootcamp</h3>
+                    <a href="https://www.babson.edu/professional/individuals/executive-education-programs/entrepreneurship-bootcamp-workshop/" class="btn">Read More</a>
+                </div>
+                
+                <div class="box">
+                    <h2>113</h2>
+                    <h3>Business Plan Competition</h3>
+                    <a href="https://www.nibsweb.org/competitions/business-plan-competition/" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="box-container fade-in">
+                <div class="box">
+                    <h2>114</h2>
+                    <h3>Mentorship Program</h3>
+                    <a href="https://www.isro.gov.in/media_isro/pdf/ForeignSatellites/424_foreign_satellites.pdf" class="btn">Read More</a>
+                </div>
+
+                <div class="box">
+                    <h2>115</h2>
+                    <h3>Social Entrepreneurship</h3>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                
+                <div class="box">
+                    <h2>116</h2>
+                    <h3>Digital Marketing Masterclass</h3>
+                    <a href="launch missions.html" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-content fade-in">
+            <svg class="contact-logo" width="653" height="34" viewBox="0 0 653 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_b_1_2)">
+                <path d="M0.0540039 33V1.5H16.659L21.879 4.515V18.555L16.659 21.57H6.354V33H0.0540039ZM6.354 6.9V16.17H15.579V6.9H6.354ZM52.074 33H45.144L38.394 21.12H34.479V33H28.179V1.5H45.234L50.454 4.515V18.105L45.234 21.12L52.074 33ZM34.479 6.9V15.72H44.154V6.9H34.479ZM82.6308 30.21L77.4108 33.225H63.3258L58.1058 30.21V4.29L63.3258 1.275H77.4108L82.6308 4.29V30.21ZM64.4058 6.675V27.825H76.3308V6.675H64.4058ZM101.524 21.975V16.575H112.999V30.21L107.779 33.225H95.0437L89.8237 30.21V4.29L95.0437 1.275H107.779L112.999 4.29V10.725H106.699V6.675H96.1237V27.825H106.699V21.975H101.524ZM144.095 33H137.165L130.415 21.12H126.5V33H120.2V1.5H137.255L142.475 4.515V18.105L137.255 21.12L144.095 33ZM126.5 6.9V15.72H136.175V6.9H126.5ZM164.707 1.5L175.957 33H169.747L167.362 26.205H155.572L153.187 33H146.977L158.227 1.5H164.707ZM161.422 9.42L157.462 20.805H165.427L161.512 9.42H161.422ZM206.955 33V12.21H206.865L199.755 33H193.77L186.615 11.94H186.525V33H180.45V1.5H188.82L196.74 24.675H196.83L204.705 1.5H213.03V33H206.955ZM220.659 17.7V0.149999H229.209V3.84L224.349 17.7H220.659ZM236.875 17.025V4.29L242.095 1.275H253.48L258.7 4.29V10.275H252.4V6.675H243.175V14.19H253.48L258.7 17.205V30.21L253.48 33.225H241.645L236.425 30.21V24.225H242.725V27.825H252.4V20.04H242.095L236.875 17.025ZM302.577 30.21L297.357 33.225H283.272L278.052 30.21V4.29L283.272 1.275H297.357L302.577 4.29V30.21ZM284.352 6.675V27.825H296.277V6.675H284.352ZM334.115 33H327.185L320.435 21.12H316.52V33H310.22V1.5H327.275L332.495 4.515V18.105L327.275 21.12L334.115 33ZM316.52 6.9V15.72H326.195V6.9H316.52ZM351.397 21.975V16.575H362.872V30.21L357.652 33.225H344.917L339.697 30.21V4.29L344.917 1.275H357.652L362.872 4.29V10.725H356.572V6.675H345.997V27.825H356.572V21.975H351.397ZM384.654 1.5L395.904 33H389.694L387.309 26.205H375.519L373.134 33H366.924L378.174 1.5H384.654ZM381.369 9.42L377.409 20.805H385.374L381.459 9.42H381.369ZM406.696 12.615V33H400.396V1.5H406.291L419.881 21.885H419.971V1.5H426.271V33H420.376L406.786 12.615H406.696ZM433.926 33V1.5H440.226V33H433.926ZM446.957 6.9V1.5H468.332V5.55L454.157 27.51V27.6H468.332V33H446.057V28.95L460.232 6.99V6.9H446.957ZM480.919 19.5V27.6H493.474V33H474.619V1.5H493.474V6.9H480.919V14.1H490.774V19.5H480.919ZM523.842 29.985L518.622 33H499.317V1.5H518.622L523.842 4.515V29.985ZM505.617 6.9V27.6H517.542V6.9H505.617ZM543.624 33V24.45H552.174V33H543.624ZM543.624 18.15V9.6H552.174V18.15H543.624ZM578.258 27.6H593.108V33H571.958V18.195L577.178 15.18H586.808V6.9H578.258V10.95H571.958V4.515L577.178 1.5H587.888L593.108 4.515V17.565L587.888 20.58H578.258V27.6ZM607.942 6.9V12.93H617.347L622.567 15.945V30.21L617.347 33.225H605.962L600.742 30.21V23.775H607.042V27.825H616.267V18.33H601.642V1.5H622.117V6.9H607.942ZM652.955 30.21L647.735 33.225H635.45L630.23 30.21V4.29L635.45 1.275H647.735L652.955 4.29V30.21ZM636.53 6.675V27.825H646.655V6.675H636.53Z" fill="#FFFDFD"/>
+                </g>
+                <defs>
+                <filter id="filter0_b_1_2" x="-3.94598" y="-3.85001" width="660.901" height="41.075" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_2"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_2" result="shape"/>
+                </filter>
+                </defs>
+            </svg>
+        </div>
+    </section>
+
+    <script>
+        // Simple script to handle animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observe elements with fade-in class
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            // Apply initial styles and observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
