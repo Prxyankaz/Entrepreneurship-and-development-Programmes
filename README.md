@@ -36,7 +36,7 @@ Ensure you have the following installed:
    - Update database credentials in the configuration file
 4. Run the application:
    ```bash
-   python app.py
+   python main.py
    ```
 5. Access the platform at `http://localhost:5000`
 
