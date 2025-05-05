@@ -45,7 +45,11 @@ Ensure you have the following installed:
 - **Enroll in Programs** from the available list
 - **View Insights** on the dashboard
 
-
+## Screenshots
+![image](https://github.com/user-attachments/assets/873fc9e1-93ed-4ed3-aa2a-eecd611030fc)
+![image](https://github.com/user-attachments/assets/e4d9409c-04ad-4bef-a1d6-a0e0cd59c121)
+![image](https://github.com/user-attachments/assets/b57a56a7-a425-47df-bd82-2fa727510c04)
+![image](https://github.com/user-attachments/assets/769cecef-3a86-4dfd-8d0a-77bea44d0424)
 
 ## License
 This project is licensed under the MIT License.
