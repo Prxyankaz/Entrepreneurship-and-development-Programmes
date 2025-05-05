@@ -4,7 +4,7 @@
 This project is a web-based platform designed to facilitate Entrepreneurship Development Programs (EDP). The system allows users to register, log in, and enroll in various programs. It also provides CRUD operations and statistical insights into the most popular programs.
 
 ## Features
-- **User Authentication:** Secure login and registration system
+- **Smooth user Navigation:** navbar,sidebar support for smooth navigation
 - **Program Management:** Add, update, delete, and view programs
 - **User Enrollment:** Users can register for specific programs
 - **Statistics Dashboard:** View insights on program popularity
